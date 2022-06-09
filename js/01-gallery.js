@@ -22,6 +22,9 @@ for (const image of images) {
 
 const lupa = (event) => {
   event.preventDefault();
+  if(event.target.nodeName!==("IMG")){ 
+    return; 
+  } 
   const but = event.target;
   instance = basicLightbox.create(`
     <img
